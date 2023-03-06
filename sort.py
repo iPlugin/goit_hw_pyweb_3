@@ -40,7 +40,7 @@ def copy_file(path: Path) -> None:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level = logging.ERROR, format = "%(threadName)s %(message)s")
+    logging.basicConfig(level = logging.ERROR, format = "%(asctime)s %(levelname)s %(threadName)s %(message)s")
     print(source, output)
     folders.append(source)
     grabs_folder(source)
