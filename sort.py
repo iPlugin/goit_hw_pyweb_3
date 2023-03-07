@@ -41,10 +41,8 @@ def copy_file(path: Path) -> None:
 
 if __name__ == "__main__":
     logging.basicConfig(level = logging.ERROR, format = "%(asctime)s %(levelname)s %(threadName)s %(message)s")
-    print(source, output)
     folders.append(source)
     grabs_folder(source)
-    print(folders)
     threads = []
     for folder in folders:
         th = Thread(target=copy_file, args=(folder, ))
@@ -53,4 +51,4 @@ if __name__ == "__main__":
 
     [th.join() for th in threads]
 
-    print("Можна видалити стару папку якщо треба")
+    print("Завершено")
